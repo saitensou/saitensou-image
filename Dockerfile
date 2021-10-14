@@ -56,7 +56,10 @@ RUN apk add --update \
   curl \
   rtmpdump \
   x264-dev \
-  x265-dev
+  x265-dev \
+  ffmpeg
+
+ENV RTMP_PORT 1935
 
 # get ngnix
 COPY --from=nginx-base /usr/local/nginx /usr/local/nginx
