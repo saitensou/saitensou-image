@@ -26,9 +26,9 @@ RUN cd /tmp \
 # install RTMP
 RUN cd /tmp \
     && wget https://github.com/arut/nginx-rtmp-module/archive/refs/tags/v${NGINX_RTMP_FILE}.tar.gz \
-    && tar -zxvf ${NGINX_RTMP_FILE}.tar.gz \
-    && rm ${NGINX_RTMP_FILE}.tar.gz \
-    && mv nginx-rtmp-module-${NGINX_FILE} nginx-rtmp-module-source
+    && tar -zxvf v${NGINX_RTMP_FILE}.tar.gz \
+    && rm v${NGINX_RTMP_FILE}.tar.gz \
+    && mv nginx-rtmp-module-${NGINX_RTMP_FILE} nginx-rtmp-module-source
 
 
 # build nginx
@@ -67,8 +67,6 @@ COPY --from=nginx-base /etc/nginx /etc/nginx
 
 # configure structure
 ENV PATH "${PATH}:/usr/local/nginx/sbin"
-RUN ln -sf /dev/stdout /var/log/nginx/access.log && \
-    ln -sf /dev/stderr /var/log/nginx/error.log
 
 # replace nginx.conf
 COPY configs/nginx.conf /etc/nginx/nginx.conf
@@ -76,5 +74,6 @@ COPY configs/nginx.service /usr/lib/systemd/system/
 
 # Set default ports.
 EXPOSE 1935
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
