@@ -25,27 +25,27 @@ This project currently copies the config from the nginx official repo, therefore
 ## Timeline
 The high level progress of the project is as follows:
 - [X] Built a minial working image
-- [ ] (Documentation)
+    - [ ] (Documentation)
 - [ ] Configure the config to allow more configuration
-- [ ] (Documentation)
+    - [ ] (Documentation)
 - [ ] Push to AWS ECR
-- [ ] (Documentation)
+    - [ ] (Documentation)
 - [ ] Test with AWS ECS
-- [ ] (Documentation)
+    - [ ] (Documentation)
 - [ ] Push to AWS EKS
-- [ ] (Documentation)
+    - [ ] (Documentation)
 - [ ] Add config to expose as service
-- [ ] (Documentation)
+    - [ ] (Documentation)
 - [ ] Add config to make deployment
-- [ ] (Documentation)
+    - [ ] (Documentation)
 - [ ] Make it as a CDK/CloudFormation Template
-- [ ] (Documentation)
+    - [ ] (Documentation)
 - [ ] Add front-end application to interact with the service
-- [ ] (Documentation)
+    - [ ] (Documentation)
 
 
 
 
 ## Reference
-Nginx RTMP module: https://github.com/arut/nginx-rtmp-module
-Nginx RTMP module tutorial (local, not containerize): https://www.nginx.com/blog/video-streaming-for-remote-learning-with-nginx/
+- [Nginx RTMP module](https://github.com/arut/nginx-rtmp-module)
+- [Nginx RTMP module local setup tutorial](https://www.nginx.com/blog/video-streaming-for-remote-learning-with-nginx/)
