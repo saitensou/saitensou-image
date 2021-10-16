@@ -1,5 +1,5 @@
 # saitensou-image
-This is the repository to build the imaged used in the saitensou system.
+This is the repository to build the image used in the saitensou system.
 
 ## Introduction
 This image serve as an image that hosts a RTMP server.
