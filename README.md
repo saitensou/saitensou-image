@@ -18,6 +18,8 @@ This project currently copies the config from the nginx official repo, therefore
 1. basic streaming
     - Basically, the image is configured to receieve anything from the port `RTMP_PORT`. therefore you can stream the playable (OBS or file) directly to the following address:
         > rtmp://{SERVER_ADDRESS}:{RTMP_PORT}/hls/{APPLICATION_NAME}
+        - sample file streaming command:
+            > `ffmpeg -re -ss {START_TIME} -i {FILE_LOCATION} -vcodec copy -c:a aac -b:a 160k -ar 44100 -strict -2  -f flv rtmp://{SERVER_ADDRESS}:{RTMP_PORT}/hls/{APPLICATION_NAME}`
     - Then the stream can be viewed in the following site:
         > http://{SERVER_ADDRESS}:{STREAM_PORT}/hls/{APPLICATION_NAME}.m3u8
 
