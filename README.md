@@ -30,9 +30,9 @@ The high level progress of the project is as follows:
     - [ ] (Documentation)
 - [ ] Configure the config to allow more configuration
     - [ ] (Documentation)
-- [ ] Push to AWS ECR
+- [X] Push to AWS ECR
     - [ ] (Documentation)
-- [ ] Test with AWS ECS
+- [X] Test with AWS ECS
     - [ ] (Documentation)
 - [ ] Push to AWS EKS
     - [ ] (Documentation)
